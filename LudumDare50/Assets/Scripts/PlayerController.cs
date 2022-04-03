@@ -25,11 +25,11 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float adjustedspeed = Speed / 100;
         Vector3 movement = new Vector3(movementX, movementY, 0);
-        transform.Translate(movement * adjustedspeed);
+        transform.Translate(movement * Speed);
     }
 
     // Called when one of the buttons used to move the character is pressed

@@ -26,7 +26,7 @@ public class CameraController : MonoBehaviour
     /// <summary>
     /// Ran at the end of the frame
     /// </summary>
-    void LateUpdate()
+    void FixedUpdate()
     {
         float xTarget = Sprite.transform.position.x + delta.x;
         float yTarget = Sprite.transform.position.y + delta.y;
