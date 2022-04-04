@@ -12,6 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Launch.unity
     guid: 0a32cc266daca8b4688aab83b53f14f3
   - enabled: 1
-    path: Assets/Scenes/Logan_Work.unity
-    guid: 0ba3aa89ceab562479d464d7739086d7
-  m_configObjects: {}
+    path: Assets/Scenes/Tree.unity
+    guid: 63840d2a9b8f1f240a7381d13e242d45
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 3a521d36739df1a4a98774ba51f57fb4, type: 2}
