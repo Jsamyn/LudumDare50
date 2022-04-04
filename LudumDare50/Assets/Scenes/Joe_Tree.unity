@@ -381,7 +381,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222057041}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.86, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -410,6 +410,34 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1222057041}
+    - target: {fileID: 5204320779264946782, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
+      propertyPath: upDoor.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204320779264946782, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204320779264946782, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
+      propertyPath: downDoor.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204320779264946782, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
+      propertyPath: leftDoor.x
+      value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204320779264946782, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
+      propertyPath: leftDoor.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204320779264946782, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
+      propertyPath: rigthDoor.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204320779264946782, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
+      propertyPath: grids.Array.data[2]
+      value: 
+      objectReference: {fileID: 1078799392825339209, guid: 4e90827da90b4d14c909b98fc9664e66, type: 3}
     - target: {fileID: 5204320779264946783, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
       propertyPath: m_RootOrder
       value: 1
