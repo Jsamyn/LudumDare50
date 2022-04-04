@@ -10,7 +10,9 @@ public class PlayerController : MonoBehaviour
     /// Speed of the player object
     /// </summary>
     public float Speed = 0;
-
+    public GameObject tree;
+    public GameObject gameManager;
+    public bool hasWater = false;
 
     /* Private Properties */
     private Rigidbody2D _rb;
@@ -39,5 +41,12 @@ public class PlayerController : MonoBehaviour
         
         _movementX = movementVector.x;
         _movementY = movementVector.y;
+    }
+
+    private void OnInteract(InputValue input) {
+        if (tree.GetComponent<TreeOfLife>().inRadius && hasWater) {
+            gameManager.GetComponent<GameManager>().addWater();
+            hasWater = false;
+        }
     }
 }
