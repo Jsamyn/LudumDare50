@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TreeOfLife : MonoBehaviour
+public class bread : MonoBehaviour
 {
-    /* Public Properties */
-    public float ScaleRate;
+    private GameObject player;
     public bool inRadius = false;
 
-    /* Private Properties */
-    private float _health;
-    
+    void Start() {
+        player = GameObject.Find("Player");
+    }
+
     void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.name == "Player")
             inRadius = true;
