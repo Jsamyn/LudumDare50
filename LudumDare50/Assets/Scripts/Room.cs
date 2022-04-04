@@ -13,7 +13,7 @@ public class Room : MonoBehaviour
     public GameObject down = null;
     public Vector3 leftDoor = new Vector3(-6, 0, 0);
     public Vector3 rigthDoor = new Vector3(9, 0, 0);
-    public Vector3 upDoor = new Vector3(0, 3, 0);
+    public Vector3 upDoor = new Vector3(0, 2.9f, 0);
     public Vector3 downDoor = new Vector3(0, -6, 0);
     public GameObject player;
 
@@ -48,11 +48,31 @@ public class Room : MonoBehaviour
                 currentGrid.SetActive(true);
                 player.transform.position = new Vector3(-5.5f, -1.5f, 0);
             }
-        } //else if (/*Player is on the up door*/) {
-        //     up = new Room();
-        // } else if (/*Player is on the down door*/) {
-        //     down = new Room();
-        // }
+        } else if (player.transform.position.y > upDoor.y)
+        {
+            if (up == null) addRoom('u');
+            else
+            {
+                up.GetComponent<Room>().currentGrid = up;
+                currentGrid = up;
+                Debug.Log(currentGrid.name);
+                currentGrid.GetComponent<Room>().down.SetActive(false);
+                currentGrid.SetActive(true);
+                player.transform.position = new Vector3(1.5f, -5.9f, 0);
+            }
+        }else if (player.transform.position.y < downDoor.y)
+        {
+            if (down == null) addRoom('d');
+            else
+            {
+                down.GetComponent<Room>().currentGrid = down;
+                currentGrid = down;
+                Debug.Log(currentGrid.name);
+                currentGrid.GetComponent<Room>().up.SetActive(false);
+                currentGrid.SetActive(true);
+                player.transform.position = new Vector3(1.5f, 2.92f, 0);
+            }
+        }
     }
 
     void addRoom(char c) {
@@ -82,6 +102,32 @@ public class Room : MonoBehaviour
                 currentGrid.GetComponent<Room>().left.SetActive(false);
                 player.transform.position = new Vector3(-5.5f, -1.5f, 0);
                 break;
+            }
+            case 'u':{
+                GameObject u = Instantiate(grid1, new Vector3(0, 0, 0), Quaternion.identity);
+                u.name = $"Grid_U_{roomCount}";
+                roomCount++;
+                u.GetComponent<Room>().roomCount = roomCount;
+                u.GetComponent<Room>().down = currentGrid;
+                currentGrid.GetComponent<Room>().up = u;
+                currentGrid = u;
+                Debug.Log(currentGrid.name);
+                currentGrid.GetComponent<Room>().down.SetActive(false);
+                player.transform.position = new Vector3(1.5f, -5.9f, 0);
+                    break;
+            }
+            case 'd':{
+                GameObject d = Instantiate(grid1, new Vector3(0, 0, 0), Quaternion.identity);
+                d.name = $"Grid_D_{roomCount}";
+                roomCount++;
+                d.GetComponent<Room>().roomCount = roomCount;
+                d.GetComponent<Room>().up = currentGrid;
+                currentGrid.GetComponent<Room>().down = d;
+                currentGrid = d;
+                Debug.Log(currentGrid.name);
+                currentGrid.GetComponent<Room>().up.SetActive(false);
+                player.transform.position = new Vector3(1.5f, 2.92f, 0);
+                    break;
             }
         }
     }
