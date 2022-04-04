@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5204320777968088892, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.02
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5204320777968088894, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
       propertyPath: m_Size.y
@@ -2109,7 +2109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5204320779264946781, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
       propertyPath: m_Name
-      value: Grid (1)
+      value: Room2
       objectReference: {fileID: 0}
     - target: {fileID: 5204320779264946782, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
       propertyPath: grid1
@@ -2119,6 +2119,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5204320779264946782, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
+      propertyPath: upDoor.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204320779264946782, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
+      propertyPath: downDoor.y
+      value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204320779264946782, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
+      propertyPath: upDoorTP.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204320779264946782, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
+      propertyPath: downDoorTP.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204320779264946782, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
+      propertyPath: grids.Array.data[1]
+      value: 
+      objectReference: {fileID: 8981458869790261381}
     - target: {fileID: 5204320779264946783, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2165,3 +2185,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
+--- !u!1 &8981458869790261381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5204320779264946781, guid: 8caab440945decd40aaeacd1d3cf4eab, type: 3}
+  m_PrefabInstance: {fileID: 3791462908159079128}
+  m_PrefabAsset: {fileID: 0}
