@@ -11,11 +11,12 @@ public class GameManager : MonoBehaviour
     public static int DEFAULT_DIFFICULTY = 1;
     public static int DEFAULT_TIMER_START = 1;
 
+    public float timerMax;
     public bool timerIsRunning;
     public int difficulty;
     public float treeTimer;
-    private static int WATER_LOWER_LIMIT = 2;
-    private static int WATER_UPPER_LIMIT = 5;
+    private static int WATER_LOWER_LIMIT = 1;
+    private static int WATER_UPPER_LIMIT = 4;
 
     // Start is called before the first frame update
     void Start() {
@@ -26,11 +27,15 @@ public class GameManager : MonoBehaviour
             if (temp == 1) timerIsRunning = true;
             else timerIsRunning = false;
         }
+        timerMax = treeTimer;
     }
 
     // Update is called once per frame
     void Update() {
-        if (treeTimer < DEFAULT_TIME - DEFAULT_DIFFICULTY_SCALE * difficulty) difficulty++;
+        if (treeTimer < timerMax - DEFAULT_DIFFICULTY_SCALE) {
+            difficulty++;
+            timerMax -= DEFAULT_DIFFICULTY_SCALE;
+        }
         if (timerIsRunning) {
             if (treeTimer > 0) treeTimer -= Time.deltaTime;
             else {
@@ -39,7 +44,7 @@ public class GameManager : MonoBehaviour
                 PlayerPrefs.DeleteAll();
             }
         }
-        Debug.Log("Timer: "+treeTimer+" | timerIsRunning: "+timerIsRunning+" | Difficulty: "+difficulty);
+        // Debug.Log("Timer: "+treeTimer+" | timerIsRunning: "+timerIsRunning+" | Difficulty: "+difficulty);
     }
 
     public void save() {
@@ -49,9 +54,10 @@ public class GameManager : MonoBehaviour
         else PlayerPrefs.SetInt("timerIsRunning", 0);
     }
 
-    void addWater() {
-        int rand = Random.Range(WATER_LOWER_LIMIT, WATER_UPPER_LIMIT) - 1;
-        treeTimer += rand * DEFAULT_DIFFICULTY_SCALE;
+    public void addWater() {
+        int rand = Random.Range(WATER_LOWER_LIMIT, WATER_UPPER_LIMIT);
+        treeTimer += rand * DEFAULT_DIFFICULTY_SCALE * 2;
+        timerMax = treeTimer;
         if (difficulty > rand) difficulty -= rand;
     }
 
