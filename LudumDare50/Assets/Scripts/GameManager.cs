@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class GameManager : MonoBehaviour
     public float treeTimer;
     private static int WATER_LOWER_LIMIT = 1;
     private static int WATER_UPPER_LIMIT = 4;
+
+    public Text timerText;
 
     // Start is called before the first frame update
     void Start() {
@@ -44,7 +47,7 @@ public class GameManager : MonoBehaviour
                 PlayerPrefs.DeleteAll();
             }
         }
-        Debug.Log(treeTimer);
+        timerText.text = $"{Mathf.Round(treeTimer).ToString()}s";
     }
 
     public void save() {
