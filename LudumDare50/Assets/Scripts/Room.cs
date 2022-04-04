@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class Room : MonoBehaviour
 {
     private int roomCount;
 
+    public Tilemap ground;
+    public GameObject waterPrefab;
+    private static float WATER_SPAWN_DIFFICULTY = 0.25f;
     [Header("Connected Rooms")]
     private GameObject left = null;
     private GameObject right = null;
@@ -22,6 +26,8 @@ public class Room : MonoBehaviour
     public Vector3 rightDoorTP = new Vector3(6, -1.5f, 0);
     public Vector3 upDoorTP = new Vector3(1.5f, -6, 0);
     public Vector3 downDoorTP = new Vector3(1.5f, 3, 0);
+    [Header("Spawnable Room Offset")]
+    public Vector3 offset = new Vector3(-7.5f, -6.5f, 0);
 
     private GameObject player;
 
@@ -33,6 +39,18 @@ public class Room : MonoBehaviour
     void Awake() {
         currentGrid = this.gameObject;
         player = GameObject.Find("Player");
+        if (gameObject.name == "Grid") return;
+        BoundsInt bounds = ground.cellBounds;
+        TileBase[] spawnableTiles = ground.GetTilesBlock(bounds);
+        for (int x = 0; x < bounds.size.x; x++) {
+            for (int y = 0; y < bounds.size.y; y++) {
+                TileBase tile = spawnableTiles[x + y * bounds.size.x];
+                if (tile != null && Random.Range(0f, 100f) <= WATER_SPAWN_DIFFICULTY) {
+                    GameObject water = Instantiate(waterPrefab, new Vector3(x + offset.x, y + offset.y, 0), Quaternion.identity);
+                    water.transform.parent = gameObject.transform;
+                }
+            }
+        }       
     }
 
     // Update is called once per frame

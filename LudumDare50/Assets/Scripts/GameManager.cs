@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
                 PlayerPrefs.DeleteAll();
             }
         }
+        Debug.Log(treeTimer);
     }
 
     public void save() {
