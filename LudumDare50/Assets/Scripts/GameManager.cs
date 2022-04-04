@@ -24,17 +24,20 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         if (PlayerPrefs.HasKey("difficulty")) difficulty = PlayerPrefs.GetInt("difficulty");
+        else difficulty = DEFAULT_DIFFICULTY;
         if (PlayerPrefs.HasKey("treeTimer")) treeTimer = PlayerPrefs.GetFloat("treeTimer");
+        else treeTimer = DEFAULT_TIME;
         if (PlayerPrefs.HasKey("timerIsRunning")) {
             int temp = PlayerPrefs.GetInt("timerIsRunning");
             if (temp == 1) timerIsRunning = true;
             else timerIsRunning = false;
         }
+        else timerIsRunning = true;
         timerMax = treeTimer;
     }
 
     // Update is called once per frame
-    void Update() {
+    void FixedUpdate() {
         if (treeTimer < timerMax - DEFAULT_DIFFICULTY_SCALE) {
             difficulty++;
             timerMax -= DEFAULT_DIFFICULTY_SCALE;

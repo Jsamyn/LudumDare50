@@ -20,12 +20,12 @@ public class SceneManagerScript : MonoBehaviour
         GameObject.Find("Game Manager").GetComponent<GameManager>().enabled = true;
         Time.timeScale = 1f;
         // This it to load the first scene
-        SceneManager.LoadScene("Scenes/Tree");
+        SceneManager.LoadScene(1);
     }
 
     public void continueGame() {
         Time.timeScale = 1f;
         // This is load where the player left off
-        SceneManager.LoadScene("Scenes/Tree");
+        SceneManager.LoadScene(1);
     }
 }
