@@ -21,8 +21,8 @@ public class Room : MonoBehaviour
     public GameObject grid1;
 
     // Start is called before the first frame update
-    void Start() {
-        currentGrid = gameObject;
+    void Awake() {
+        currentGrid = this.gameObject;
         player = GameObject.Find("Player");
     }
 
@@ -31,6 +31,7 @@ public class Room : MonoBehaviour
         if (player.transform.position.x < leftDoor.x) {
             if (left == null) addRoom('l');
             else {
+                left.GetComponent<Room>().currentGrid = left;
                 currentGrid = left;
                 Debug.Log(currentGrid.name);
                 currentGrid.GetComponent<Room>().right.SetActive(false);
@@ -40,6 +41,7 @@ public class Room : MonoBehaviour
         } else if (player.transform.position.x > rigthDoor.x) {
             if (right == null) addRoom('r');
             else {
+                right.GetComponent<Room>().currentGrid = right;
                 currentGrid = right;
                 Debug.Log(currentGrid.name);
                 currentGrid.GetComponent<Room>().left.SetActive(false);
