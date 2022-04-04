@@ -13,22 +13,22 @@ public class PlayerController : MonoBehaviour
 
 
     /* Private Properties */
-    private Rigidbody2D rb;
-    private float movementX;
-    private float movementY;
+    private Rigidbody2D _rb;
+    private float _movementX;
+    private float _movementY;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         float adjustedspeed = Speed / 100;
-        Vector3 movement = new Vector3(movementX, movementY, 0);
+        Vector3 movement = new Vector3(_movementX, _movementY, 0);
         transform.Translate(movement * Speed);
     }
 
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
         
-        movementX = movementVector.x;
-        movementY = movementVector.y;
+        _movementX = movementVector.x;
+        _movementY = movementVector.y;
     }
 }

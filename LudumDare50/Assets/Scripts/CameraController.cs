@@ -9,12 +9,12 @@ public class CameraController : MonoBehaviour
     public float FollowSpeed;
 
     /* Private Properties */
-    private Vector3 delta;
+    private Vector3 _delta;
 
     // Start is called before the first frame update
     void Start()
     {
-        delta = transform.position - Sprite.transform.position;
+        _delta = transform.position - Sprite.transform.position;
     }
 
     // Update is called once per frame
@@ -28,8 +28,8 @@ public class CameraController : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        float xTarget = Sprite.transform.position.x + delta.x;
-        float yTarget = Sprite.transform.position.y + delta.y;
+        float xTarget = Sprite.transform.position.x + _delta.x;
+        float yTarget = Sprite.transform.position.y + _delta.y;
 
         float xNew = Mathf.Lerp(transform.position.x, xTarget, Time.deltaTime * FollowSpeed);
         float yNew = Mathf.Lerp(transform.position.y, yTarget, Time.deltaTime * FollowSpeed);
