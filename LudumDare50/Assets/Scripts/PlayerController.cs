@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject tree;
     public GameObject gameManager;
     public bool hasWater = false;
+    public Animator animator;
 
     /* Private Properties */
     private Rigidbody2D _rb;
@@ -41,6 +42,8 @@ public class PlayerController : MonoBehaviour
         
         _movementX = movementVector.x;
         _movementY = movementVector.y;
+        animator.SetFloat("x", _movementX);
+        animator.SetFloat("y", _movementY);
     }
 
     private void OnInteract(InputValue input) {
