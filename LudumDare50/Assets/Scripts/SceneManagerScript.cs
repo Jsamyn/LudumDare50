@@ -17,6 +17,7 @@ public class SceneManagerScript : MonoBehaviour
     }
 
     public void newGame() {
+        Debug.Log("fdsa");
         GameObject.Find("Game Manager").GetComponent<GameManager>().enabled = true;
         Time.timeScale = 1f;
         // This it to load the first scene

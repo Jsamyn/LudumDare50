@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     // The bigger the value the easier
-    public static float DEFAULT_DIFFICULTY_SCALE = 30f;
-    public static float DEFAULT_TIME = 180f;
+    public static float DEFAULT_DIFFICULTY_SCALE = 15f;
+    public static float DEFAULT_TIME = 120f;
     public static int DEFAULT_DIFFICULTY = 1;
     public static int DEFAULT_TIMER_START = 1;
 
