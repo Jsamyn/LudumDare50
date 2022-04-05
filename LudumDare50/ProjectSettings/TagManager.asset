@@ -50,6 +50,9 @@ TagManager:
   - name: Player
     uniqueID: 3977690257
     locked: 0
+  - name: Wall Edges
+    uniqueID: 2457021443
+    locked: 0
   - name: Shadow
     uniqueID: 1931220931
     locked: 0
