@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 657fd1233beff25499f716647b9a280c
+guid: 11a09bc6ca5546841aaabd69389990e7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5569409048684548343
-    second: PlayerSouth_0
+      213: 2316017546258279038
+    second: forest barrier2(1)_0
   - first:
-      213: 819436648058918876
-    second: PlayerSouth_1
+      213: 8152028409179959837
+    second: forest barrier2(1)_1
   - first:
-      213: 2035417559943709296
-    second: PlayerSouth_2
+      213: 219276209180346403
+    second: forest barrier2(1)_2
   - first:
-      213: 8633686063091867958
-    second: PlayerSouth_3
+      213: -8417827248264528287
+    second: forest barrier2(1)_3
+  - first:
+      213: 1813014623488607206
+    second: forest barrier2(1)_4
+  - first:
+      213: 6377247157041946158
+    second: forest barrier2(1)_5
+  - first:
+      213: 536223911947088306
+    second: forest barrier2(1)_6
+  - first:
+      213: 7377018935249290536
+    second: forest barrier2(1)_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -55,7 +67,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -80,7 +92,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -92,19 +104,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,7 +115,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerSouth_0
+      name: forest barrier2(1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7aeb4200b5242020800000000000000
+      internalID: 2316017546258279038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest barrier2(1)_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12701895a2d12170800000000000000
+      internalID: 8152028409179959837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest barrier2(1)_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32883ebec860b0300800000000000000
+      internalID: 219276209180346403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest barrier2(1)_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16eb69e97bedd2b80800000000000000
+      internalID: -8417827248264528287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest barrier2(1)_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e380adb13f192910800000000000000
+      internalID: 1813014623488607206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest barrier2(1)_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2eda505088808850800000000000000
+      internalID: 6377247157041946158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forest barrier2(1)_6
       rect:
         serializedVersion: 2
         x: 0
@@ -129,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f050b395048a4d40800000000000000
-      internalID: 5569409048684548343
+      spriteID: 2b13daf8ecc017700800000000000000
+      internalID: 536223911947088306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerSouth_1
+      name: forest barrier2(1)_7
       rect:
         serializedVersion: 2
         x: 32
@@ -150,50 +276,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd71d733a493f5b00800000000000000
-      internalID: 819436648058918876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerSouth_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07289069c714f3c10800000000000000
-      internalID: 2035417559943709296
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerSouth_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 631e4dc2bb301d770800000000000000
-      internalID: 8633686063091867958
+      spriteID: 8254dd0f2af606660800000000000000
+      internalID: 7377018935249290536
       vertices: []
       indices: 
       edges: []
